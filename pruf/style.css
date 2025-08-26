@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fb;
+    color: #2d3436;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px 10px;
+    color: #1e272e;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+#scoreDisplay {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #dfe6e9;
+    border-radius: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#scoreBar {
+    height: 100%;
+    background-color: #0984e3;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.question {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 750px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.question:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.description {
+    font-size: 1.1em;
+    color: #2d3436;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-left: 6px solid #0984e3;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.answers button {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #74b9ff;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.answers button:hover:not(:disabled) {
+    background-color: #0984e3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.answers button.correct {
+    background-color: #00b894;
+    color: white;
+}
+
+.answers button.wrong {
+    background-color: #d63031;
+    color: white;
+}
+
+.answers button:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.question img {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 500px) {
+    .question {
+        padding: 20px;
+    }
+    .answers button {
+        padding: 14px;
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.8em;
+        padding: 20px 10px;
+    }
+}
+
+
+/* script.css oder im style-Tag */
+#scoreDisplay {
+  position: sticky;   /* bleibt sichtbar beim Scrollen */
+  top: 20px;          /* Abstand vom oberen Rand */
+  left: 20px;         /* Abstand vom linken Rand */
+  background-color: #f0f0f0; /* optional für bessere Sichtbarkeit */
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 1000;      /* damit es über anderen Inhalten bleibt */
+}
