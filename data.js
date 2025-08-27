@@ -1853,14 +1853,15 @@ question: "",
 
   },
   {
-    question: "Betrachten Sie den folgenden Fehlerbericht für ein Buchausleihsystem. Welche der folgenden Optionen hilft dem Entwickler am ehesten, den Fehler schnell zu reproduzieren?",
+    question: "",
     options: [
       "a) Hinzufügen spezifischer Informationen zu den betroffenen Benutzern und Büchern im Abschnitt „Beschreibung“.",
       "b) Ergänzung des fehlenden Wertes im Feld „Priorität“.",
       "c) Hinzufügen von Speicherabzügen und Datenbankschnappschüssen im Abschnitt „Anhänge“ nach jedem beschriebenen Schritt.",
       "d) Wiederholung desselben Testfalls in verschiedenen Umgebungen und Erstellung separater Fehlerberichte für jede Umgebung."
     ],
-    correct: 0
+    correct: 0,
+    image:"img/setd38.png"
   },
   {
     question: "Werkzeuge aus welchen Testwerkzeugkategorien erleichtern höchstwahrscheinlich die Testausführung?",
