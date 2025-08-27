@@ -81,6 +81,27 @@ quizContainer.appendChild(scoreDiv);
     quizContainer.appendChild(questionDiv);
   });
 }
+const darkBtn = document.getElementById("darkToggle");
+
+// Prüfen ob Darkmode gespeichert ist
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  darkBtn.textContent = "☀️";
+}
+
+// Klick-Event
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    darkBtn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    darkBtn.textContent = "🌙";
+  }
+});
+
 
 
 
