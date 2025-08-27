@@ -454,7 +454,7 @@ const quizData = [
     "d) Risikotransfer"
   ],
   correct: 2,
-   image:"img/seta35.png"
+   image:"img/SETA35.png"
 },
 // Frage 36: Testberichte
 {
@@ -746,7 +746,8 @@ question: "",
     "c) 1C, 2A, 3B, 4D",
     "d) 1C, 2B, 3A, 4D"
   ],
-  correct: 3
+  correct: 3,
+  image:"img/setb17.png"
 },
 {
   question: "Welche Zuordnung von Rollen zu Verantwortlichkeiten im Reviewprozess ist korrekt?\nWählen Sie EINE Option! (1 aus 4)",
@@ -757,7 +758,9 @@ question: "",
     "c) 1B, 2D, 3A, 4C",
     "d) 1B, 2D, 3C, 4A"
   ],
-  correct: 2
+  correct: 2,
+    image:"img/setb18.png"
+
 },
 {
   question: "Welche der folgenden Aussagen beschreibt korrekt die Zuordnung von Verfahrensgrundlagen zu Entscheidungstabellen- und Zweigtests?\nWählen Sie EINE Option! (1 aus 4)",
@@ -1002,10 +1005,10 @@ question: "",
   {
     question: "Welcher der folgenden Vorteile trifft AM EHESTEN auf die Testautomatisierung zu?",
     options: [
-      "a) Die Testautomatisierung ermöglicht auch die Messung komplexerer Überdeckungskriterien.",
-      "b) Durch die Testautomatisierung wird ein Teil der Verantwortung für das Testen dem Werkzeuganbieter übertragen.",
-      "c) Die Testautomatisierung macht kritisches Denken bei der Analyse von Testergebnissen überflüssig.",
-      "d) Testautomatisierung generiert Testfälle auf Systemebene aus einer Analyse des Programmcodes."
+      "a)1A, 2B, 3C, 4D",
+      "b)1B, 2D, 3C, 4A",
+      "c)1C, 2D, 3B, 4A",
+      "d)1D, 2C, 3A, 4B"
     ],
     correct: 0,
      image:"img/setB39.png"
@@ -1267,16 +1270,6 @@ question: "",
   correct: 1
 
   
-},
-{
-  question: "Was ist der zentrale Unterschied zwischen Black-Box-Verfahren und erfahrungsbasierten Testverfahren? ",
-  options: [
-    "a) Das getestete Objekt",
-    "b) Die Teststufe, auf der das Testverfahren angewendet wird.",
-    "c) Die zugrunde liegende Testbasis",
-    "d) Die Phase im Softwareentwicklungslebenszyklus (SDLC), in der das Testverfahren eingesetzt wird."
-  ],
-  correct: 2
 },
 
 {
