@@ -24,6 +24,44 @@ function getQuestions(quizData, amount) {
   return questionPool.splice(0, amount);
 }
 
+// Timer sticky oben links erstellen und starten
+function createStickyTimer(durationInSeconds) {
+  const timerDiv = document.createElement('div');
+  timerDiv.id = 'timer';
+  timerDiv.style.position = 'fixed';
+  timerDiv.style.top = '20px';
+  timerDiv.style.left = '150px'; // neben Punkteanzeige
+  // timerDiv.style.backgroundColor = '#f0f0f0'; // entfernt, kein Hintergrund
+  timerDiv.style.padding = '10px 15px';
+  timerDiv.style.borderRadius = '5px';
+  timerDiv.style.fontWeight = 'bold';
+  timerDiv.style.zIndex = '1000';
+  document.body.appendChild(timerDiv);
+
+  let timer = durationInSeconds;
+
+  const interval = setInterval(() => {
+    const hours = Math.floor(timer / 3600);
+    const minutes = Math.floor((timer % 3600) / 60);
+    const seconds = timer % 60;
+
+    timerDiv.textContent =
+      `${hours.toString().padStart(2,'0')}:` +
+      `${minutes.toString().padStart(2,'0')}:` +
+      `${seconds.toString().padStart(2,'0')}`;
+
+    if (timer <= 0) {
+      clearInterval(interval);
+      timerDiv.textContent = "00:00:00";
+      alert("Die Zeit ist abgelaufen!");
+      // Quiz sperren
+      document.querySelectorAll('.answers button').forEach(b => b.disabled = true);
+    }
+
+    timer--;
+  }, 1000);
+}
+
 // Quiz rendern
 function renderQuiz(quizData) {
   const quizContainer = document.getElementById('quiz');
@@ -110,6 +148,8 @@ function renderQuiz(quizData) {
     quizContainer.appendChild(questionDiv);
   });
 }
+
+  createStickyTimer(60 * 60); 
 
 // Darkmode bleibt wie gehabt
 const darkBtn = document.getElementById("darkToggle");
