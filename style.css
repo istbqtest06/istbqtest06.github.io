@@ -184,3 +184,27 @@ body.dark #scoreDisplay {
   z-index: 1100;
   font-size: 1em;
 }
+/* Buttons im Normalmodus */
+.answers button.correct {
+  background-color: #00b894;
+  color: white;
+}
+
+.answers button.wrong {
+  background-color: #d63031;
+  color: white;
+}
+
+/* Buttons im Darkmode - gleiche Farben, aber klarer sichtbar */
+body.dark .answers button.correct {
+  background-color: #00e676; /* helleres Grün */
+  color: #121212;
+  font-weight: bold;
+}
+
+body.dark .answers button.wrong {
+  background-color: #ff5252; /* helleres Rot */
+  color: #121212;
+  font-weight: bold;
+}
+

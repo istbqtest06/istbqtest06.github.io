@@ -1,16 +1,18 @@
-
 let score = 0;
 const maxQuestions = 40;
 
-// Funktion, um ein Array zu mischen
+// Fisher-Yates Shuffle mit zusätzlichem Offset
 function shuffle(array) {
+  // Erst klassisch mischen
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-  return array;
-}
 
+  // Dann zufälligen Start-Offset einbauen
+  const offset = Math.floor(Math.random() * array.length);
+  return array.slice(offset).concat(array.slice(0, offset));
+}
 
 
 // Quiz rendern
@@ -18,11 +20,10 @@ function renderQuiz(quizData) {
   const quizContainer = document.getElementById('quiz');
 
   // Score-Anzeige erstellen
-const scoreDiv = document.createElement('div');
-scoreDiv.id = 'scoreDisplay';
-scoreDiv.textContent = `Punkte: ${score} / ${maxQuestions}`;
-quizContainer.appendChild(scoreDiv);
-
+  const scoreDiv = document.createElement('div');
+  scoreDiv.id = 'scoreDisplay';
+  scoreDiv.textContent = `Punkte: ${score} / ${maxQuestions}`;
+  quizContainer.appendChild(scoreDiv);
 
   // Fragen mischen und maximal maxQuestions verwenden
   const quizQuestions = shuffle([...quizData]).slice(0, maxQuestions);
@@ -32,7 +33,7 @@ quizContainer.appendChild(scoreDiv);
     questionDiv.classList.add('question');
 
     // Beschreibung hinzufügen
-    if(item.description) {
+    if (item.description) {
       const descDiv = document.createElement('div');
       descDiv.classList.add('description');
       descDiv.textContent = item.description;
@@ -40,7 +41,7 @@ quizContainer.appendChild(scoreDiv);
     }
 
     // Bild hinzufügen, falls vorhanden
-    if(item.image) {
+    if (item.image) {
       const img = document.createElement('img');
       img.src = item.image;
       img.alt = `Bild zu Frage ${index + 1}`;
@@ -56,17 +57,23 @@ quizContainer.appendChild(scoreDiv);
     const answersDiv = document.createElement('div');
     answersDiv.classList.add('answers');
 
-    item.options.forEach((option, i) => {
+    // Antworten auch mischen!
+    const shuffledOptions = shuffle([...item.options]);
+
+    shuffledOptions.forEach((option) => {
       const button = document.createElement('button');
       button.textContent = option;
 
       button.addEventListener('click', () => {
-        if(i === item.correct) {
+        if (option === item.options[item.correct]) {
           button.classList.add('correct');
           score++;
         } else {
           button.classList.add('wrong');
-          answersDiv.children[item.correct].classList.add('correct');
+
+          // richtige Antwort hervorheben
+          const correctIndex = shuffledOptions.indexOf(item.options[item.correct]);
+          answersDiv.children[correctIndex].classList.add('correct');
         }
         // Buttons deaktivieren
         Array.from(answersDiv.children).forEach(b => b.disabled = true);
@@ -81,15 +88,16 @@ quizContainer.appendChild(scoreDiv);
     quizContainer.appendChild(questionDiv);
   });
 }
+
+
+// Darkmode (bleibt wie gehabt)
 const darkBtn = document.getElementById("darkToggle");
 
-// Prüfen ob Darkmode gespeichert ist
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   darkBtn.textContent = "☀️";
 }
 
-// Klick-Event
 darkBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
@@ -103,10 +111,5 @@ darkBtn.addEventListener("click", () => {
 });
 
 
-
-
 // Quiz-Daten einfügen
-// Hier solltest du dein quizData aus data.js importieren
 renderQuiz(quizData);
-
-
