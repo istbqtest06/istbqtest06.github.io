@@ -1198,17 +1198,7 @@ question: "",
   ],
   correct: 0
 },
-{
-  question: "Ordnen Sie die folgenden Reviewarten den entsprechenden Beschreibungen zu: 1. Technisches Review 2. Informelles Review 3. Inspektion 4. Walkthrough. A: Konzentriert auf Ziele wie Vertrauensaufbau, Generierung neuer Ideen und Schulung von Gutachtern unter Leitung des Autors. B: Dient hauptsächlich der Erkennung potenzieller Mängel und erfordert keine formelle Dokumentation. C: Ziel ist es, möglichst viele Fehler zu finden und Metriken für die Prozessverbesserung zu erheben. D: Zielt darauf ab, durch qualifizierte Gutachter einen Konsens zu erreichen, Entscheidungen zu treffen und neue Ideen zu entwickeln.",
-  options: [
-    "a) 1A, 2B, 3C, 4D",
-    "b) 1D, 2B, 3C, 4A",
-    "c) 1B, 2C, 3D, 4A",
-    "d) 1C, 2D, 3A, 4B"
-  ],
-  correct: 1,
-   image:"img/setC17.png"
-},
+
 {
   question: "Welcher der folgenden Faktoren trägt typischerweise zum Erfolg eines Reviews bei?",
   options: [
@@ -1241,20 +1231,21 @@ question: "",
   ],
   correct: 0
 },{
-  question: "",
+  question: "Welcher der folgenden Punkte ist ein typischer Vorteil von frühem undhäufigem Stakeholder-Feedback? ",
   options: [
     "a) Änderungen an Anforderungen werden frühzeitig erkannt und können schneller umgesetzt werden.",
     "b) Geschäftsinteressenten erhalten eine Schulung zu den Benutzeranforderungen.",
     "c) Product Owner können ihre Anforderungen beliebig oft ändern.",
     "d) Endnutzer werden vor der Freigabe über nicht umgesetzte Anforderungen informiert."
   ],
-  correct: 0,
-    image:"img/setc21.png"
+  correct: 0
 
 
 },
+
+//17
 {
-  question: ".",
+  question: "",
   options: [
     "a) 1A, 2B, 3C, 4D",
     "b) 1D, 2B, 3C, 4A",
@@ -1262,40 +1253,32 @@ question: "",
     "d) 1C, 2D, 3A, 4B"
   ],
   correct: 1,
-    image:"img/setc22.png"
+  image:"img/setC17.png"
+
 },
 {
-  question: "",
+  question: "Welcher der folgenden Faktoren trägt typischerweise zum Erfolg eines Reviews bei?",
   options: [
     "a) Das Management wird als Gutachter in alle Reviews eingebunden.",
     "b) Große Arbeitsprodukte werden in kleinere, überschaubare Einheiten aufgeteilt.",
     "c) Ziel des Reviews ist ausschließlich die Bewertung durch den Gutachter.",
     "d) Für jedes Review wird genau ein Dokument eingeplant."
   ],
-  correct: 1,
-    image:"img/setc23.png"
+  correct: 1
+
+  
 },
 {
-  question: "",
+  question: "Was ist der zentrale Unterschied zwischen Black-Box-Verfahren und erfahrungsbasierten Testverfahren? ",
   options: [
     "a) Das getestete Objekt",
     "b) Die Teststufe, auf der das Testverfahren angewendet wird.",
     "c) Die zugrunde liegende Testbasis",
     "d) Die Phase im Softwareentwicklungslebenszyklus (SDLC), in der das Testverfahren eingesetzt wird."
   ],
-  correct: 2,
-    image:"img/setC24.png"
+  correct: 2
 },
-{
-  question: "Ein PIN-Validator akzeptiert nur gültige PINs und lehnt ungültige ab. Eine PIN gilt als gültig, wenn sie aus genau vier Ziffern besteht, von denen mindestens zwei unterschiedlich sind. Welche der folgenden Datensätze deckt alle relevanten Äquivalenzklassen ab (gültige und ungültige PINs)?",
-  options: [
-    "a) 112, 1111, 1234, 123456",
-    "b) 1, 123, 1111, 1234",
-    "c) 12, 112, 1112, 11112",
-    "d) 1, 111, 1111, 11111"
-  ],
-  correct: 0
-},
+
 {
   question: "Geschäftsregel: Wert (Ganzzahl), wenn Wert ≤ 100 oder Wert ≥ 200, dann 'Wert falsch', sonst 'Wert OK'. Testfälle per 2-Werte-Grenzwertanalyse.",
   options: [
@@ -1307,34 +1290,37 @@ question: "",
   correct: 3
 },
 {
-  question: "Entscheidungstabelle Fahrprüfung: Welche Kombination zeigt widersprüchliche Regeln?",
+  question: "",
   options: [
     "a) C1 = T, C2 = T, C3 = F",
     "b) C1 = T, C2 = F, C3 = T",
     "c) C1 = T, C2 = T, C3 = T und C1 = F, C2 = T, C3 = T",
     "d) C1 = F, C2 = F, C3 = F"
   ],
-  correct: 3
+  correct: 3,
+  image:"img/setc22.png"
 },
 {
-  question: "Zustandsübergangsdiagramm: Minimale Anzahl an Testfällen für vollständige Überdeckung aller gültigen Übergänge?",
+  question: "",
   options: [
     "a) 3",
     "b) 2",
     "c) 5",
     "d) 6"
   ],
-  correct: 0
+  correct: 0,
+    image:"img/setc23.png"
 },
 {
-  question: "Kontrollflussdiagramm: Wie viele Entscheidungen/Zweige müssen getestet werden, um vollständige Zweigüberdeckung zu erreichen?",
+  question: "",
   options: [
     "a) 2",
     "b) 4",
     "c) 8",
     "d) 7"
   ],
-  correct: 2
+  correct: 2,
+    image:"img/setC24.png"
 },
 {
   question: "Wie können White-Box-Tests zur Verbesserung von Black-Box-Tests beitragen?",
