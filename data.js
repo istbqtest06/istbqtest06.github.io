@@ -1728,7 +1728,9 @@ question: "",
       "c) -1, 0, 2, 3",
       "d) -2, 0, 2, 4"
     ],
-    correct: 2
+    correct: 2,
+        image:"img/setd21.png"
+
   },
 
   {

@@ -131,10 +131,8 @@ function renderQuiz(quizData) {
 
         scoreDiv.textContent = `Punkte: ${score} / ${quizQuestions.length}`;
 
-        // Wenn letzte Frage beantwortet → Score automatisch speichern
-        if (index === quizQuestions.length - 1 && answersDiv.classList.contains("finished")) {
-          saveScoreAuto();
-        }
+
+        
       });
 
       answersDiv.appendChild(button);
