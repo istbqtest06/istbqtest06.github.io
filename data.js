@@ -1831,7 +1831,7 @@ question: "",
       "d) Testfälle haben mindestens 80 % Anweisungsüberdeckung erreicht.",
       "e) Alle Testanalysten sind nach ISTQB Foundation Level zertifiziert."
     ],
-    correct: [1, 4]
+    correct: [1, 3]
   },
     {
   question: "",
