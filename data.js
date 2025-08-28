@@ -276,7 +276,7 @@ const quizData = [
 
 // Frage 22: Entscheidungstabelle Prämie
 {
-  question: "Neu eingestellte Mitarbeitende können Prämien nur erhalten, wenn sie länger als ein Jahr beschäftigt sind und ihre Ziele erreicht haben. Welche Testfallkombination fehlt in der Entscheidungstabelle?",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4) – FL-4.2.3 (K3)",
   options: [
     "a) Bedingung1 = „J“, Bedingung2 = „N“, Bedingung3 = „J“, Aktion = „N“",
@@ -290,7 +290,7 @@ const quizData = [
 
 // Frage 23: Zustandsübergangsdiagramm TV
 {
-  question: "Welche Aussage zu den Testfällen und dem Zustandsübergangsdiagramm des TVs ist WAHR?",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4) – FL-4.2.4 (K3)",
   options: [
     "a) Die Testfälle führen alle Übergänge aus; 100% Überdeckung aller Übergänge.",
@@ -417,7 +417,7 @@ const quizData = [
 
 // Frage 33: Priorisierung Testfälle
 {
-  question: "Sie testen eine mobile Applikation mit Testfällen und Abhängigkeiten. Welcher Testfall soll als dritter ausgeführt werden?",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4) – FL-5.1.5 (K3)",
   options: [
     "a) TF 003",
@@ -431,7 +431,7 @@ const quizData = [
 
 // Frage 34: Testquadranten
 {
-  question: "Wie lassen sich die Testkategorien Gebrauchstauglichkeitstest, Komponententest, funktionaler Test, Zuverlässigkeitstest den Testquadranten Q1-Q4 zuordnen?",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4) – FL-5.1.7 (K2)",
   options: [
     "a) 1C, 2A, 3B, 4D",
@@ -445,7 +445,7 @@ const quizData = [
 
 // Frage 35: Risikomanagement-Maßnahmen
 {
-  question: "Im Rahmen einer Risikoanalyse wurde das Risiko 'Zu lange Antwortzeit bei der Bereitstellung eines Suchergebnisses' identifiziert. Welche Art von Maßnahmen wurde vorgeschlagen?",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4)",
   options: [
     "a) Risikoakzeptanz",
@@ -484,7 +484,7 @@ const quizData = [
 
 // Frage 38: Fehlende Informationen im Fehlerbericht
 {
-  question: "Welche wichtigen Informationen fehlen in folgendem Fehlerbericht: Anwendung hängt sich auf nach Eingabe von 'Testeingabe: $ä'?",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4) – FL-5.5.1 (K3)",
   options: [
     "a) Erwartetes Ergebnis und tatsächliches Ergebnis",
@@ -608,7 +608,7 @@ const quizData = [
   // Frage 6: Verfolgbarkeit und Testaktivitäten
 {
 question: "",
-  description: "Wählen Sie EINE Option! (1 aus 4) – FL-1.4.4 (K2) Der Lernende kann die Bedeutung der Pflege der Verfolgbarkeit erklären.",
+  description: "",
   options: [
     "a) 1D, 2B, 3C, 4A",
     "b) 1B, 2D, 3A, 4C",
@@ -738,7 +738,7 @@ question: "",
   correct: 2
 },
 {
-  question: "Ordnen Sie die Aufgaben des Reviewprozesses den Review-Aktivitäten zu:\nWählen Sie EINE Option! (1 aus 4)",
+  question: "",
   description: "FL-3.2.2 (K2) Der Lernende kann die Aktivitäten des Reviewprozesses zusammenfassen.",
   options: [
     "a) 1B, 2C, 3D, 4A",
@@ -750,7 +750,7 @@ question: "",
   image:"img/setb17.png"
 },
 {
-  question: "Welche Zuordnung von Rollen zu Verantwortlichkeiten im Reviewprozess ist korrekt?\nWählen Sie EINE Option! (1 aus 4)",
+  question: "",
   description: "FL-3.2.3 (K1) Der Lernende kann die bei der Durchführung von Reviews den Hauptrollen zugewiesenen Verantwortlichkeiten wiedergeben.",
   options: [
     "a) 1A, 2B, 3D, 4C",
@@ -774,7 +774,7 @@ question: "",
   correct: 3
 },
 {
-  question: "Welche Eingaben für die Autowaschanlage TestWash erreichen die höchste Überdeckung der Äquivalenzklassen?\nWählen Sie EINE Option! (1 aus 4)",
+  question: "",
   description: "FL-4.1.1 (K2) Der Lernende kann Äquivalenzklassen beim Testen erkennen.",
   options: [
     "a) 19, 20, 30",
@@ -782,7 +782,8 @@ question: "",
     "c) 1, 10, 50",
     "d) 10, 29, 30, 31"
   ],
-  correct: 0
+  correct: 0,
+  image:"img/setb20.png"
 },{
   question: "",
   options: [
@@ -872,14 +873,16 @@ question: "",
 
 },
 {
-  question: "Welcher Testfall eignet sich AM BESTEN für eine abnahmetestgetriebene Entwicklung (ATDD) der User-Story?",
+  question: "",
   options: [
     "a) Login als Trainer ins DFBNET; wähle die nächsten Spieltage für meine Mannschaft aus; lade die Spielberechtigungslisten.",
     "b) GEGEBEN: Ich bin als Trainer im DFBNET mit meiner Trainerkennung angemeldet UND GEGEBEN: Ich habe den nächsten Spieltag ausgewählt, WENN ich „Spielberechtigungsliste laden“ auswähle, DANN wird mir eine Liste der spielberechtigten Spieler für den nächsten Spieltag angezeigt.",
     "c) Login als Mannschaftsverantwortlicher; wähle den nächsten Spieltag aus; lade Spielberechtigungsliste; entferne Spieler, die nicht spielberechtigt sind.",
     "d) GEGEBEN: Ich habe die nächsten Spieltage für meine Mannschaft ausgewählt WENN ich einen Spieltag auswähle UND WENN ich die Spielberechtigungsliste für diesen Spieltag lade, DANN sollen mir alle spieleberechtigten Spieler für diesen Spieltag angezeigt werden."
   ],
-  correct: 1
+  correct: 1,
+      image:"img/setb29.png"
+
 },
 {
   question: "",
@@ -1003,7 +1006,7 @@ question: "",
     correct: 2
   },
   {
-    question: "Welcher der folgenden Vorteile trifft AM EHESTEN auf die Testautomatisierung zu?",
+  question: "",
     options: [
       "a)1A, 2B, 3C, 4D",
       "b)1B, 2D, 3C, 4A",
@@ -1831,10 +1834,10 @@ question: "",
     {
   question: "",
     options: [
-      "a) Verfolgung des Testfortschritts und Identifizierung von Bereichen, die weitere Aufmerksamkeit erfordern.",
-      "b) Bereitstellung von Informationen über die durchgeführten Tests, deren Ergebnisse und gefundene Probleme oder Fehlerzustände",
-      "c) Bereitstellung detaillierter Informationen zu jedem einzelnen Fehlerzustand, einschließlich der Schritte zur Reproduktion",
-      "d) Bereitstellung von Informationen über die für den nächsten Zeitraum geplanten Tests"
+      "a) 14 Stunden",
+      "b) 3,5 Stunden",
+      "c) 16 Stunden",
+      "d) 12 Stunden"
     ],
     correct: 2,
     

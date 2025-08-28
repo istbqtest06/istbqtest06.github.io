@@ -6,7 +6,7 @@ let questionPool = [];
 
 // Super Shuffle Funktion
 function superShuffle(array) {
-  for (let k = 0; k < 2; k++) { // doppelt mischen
+  for (let k = 0; k < 2; k++) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -16,7 +16,6 @@ function superShuffle(array) {
   return array.slice(offset).concat(array.slice(0, offset));
 }
 
-// Funktion: Nächste Fragen aus dem Pool ziehen
 function getQuestions(quizData, amount) {
   if (questionPool.length < amount) {
     questionPool = superShuffle([...quizData]);
@@ -30,8 +29,7 @@ function createStickyTimer(durationInSeconds) {
   timerDiv.id = 'timer';
   timerDiv.style.position = 'fixed';
   timerDiv.style.top = '20px';
-  timerDiv.style.left = '150px'; // neben Punkteanzeige
-  // timerDiv.style.backgroundColor = '#f0f0f0'; // entfernt, kein Hintergrund
+  timerDiv.style.left = '150px';
   timerDiv.style.padding = '10px 15px';
   timerDiv.style.borderRadius = '5px';
   timerDiv.style.fontWeight = 'bold';
@@ -54,7 +52,6 @@ function createStickyTimer(durationInSeconds) {
       clearInterval(interval);
       timerDiv.textContent = "00:00:00";
       alert("Die Zeit ist abgelaufen!");
-      // Quiz sperren
       document.querySelectorAll('.answers button').forEach(b => b.disabled = true);
     }
 
@@ -66,7 +63,6 @@ function createStickyTimer(durationInSeconds) {
 function renderQuiz(quizData) {
   const quizContainer = document.getElementById('quiz');
 
-  // Score-Anzeige
   const scoreDiv = document.createElement('div');
   scoreDiv.id = 'scoreDisplay';
   scoreDiv.textContent = `Punkte: ${score} / ${maxQuestions}`;
@@ -99,14 +95,11 @@ function renderQuiz(quizData) {
     const answersDiv = document.createElement('div');
     answersDiv.classList.add('answers');
 
-    // Richtige Antworten in Array (für Single- und Multiple-Choice)
     let correctAnswers = Array.isArray(item.correct)
       ? item.correct.map(i => item.options[i])
       : [item.options[item.correct]];
 
     let chosenCorrect = new Set();
-
-    // Antworten mischen
     const shuffledOptions = superShuffle([...item.options]);
 
     shuffledOptions.forEach((option) => {
@@ -127,18 +120,21 @@ function renderQuiz(quizData) {
           }
         } else {
           button.classList.add('wrong');
-
           correctAnswers.forEach(corr => {
             [...answersDiv.children].forEach(b => {
               if (b.textContent === corr) b.classList.add("correct");
             });
           });
-
           answersDiv.classList.add("finished");
           Array.from(answersDiv.children).forEach(b => b.disabled = true);
         }
 
         scoreDiv.textContent = `Punkte: ${score} / ${quizQuestions.length}`;
+
+        // Wenn letzte Frage beantwortet → Score automatisch speichern
+        if (index === quizQuestions.length - 1 && answersDiv.classList.contains("finished")) {
+          saveScoreAuto();
+        }
       });
 
       answersDiv.appendChild(button);
@@ -149,9 +145,7 @@ function renderQuiz(quizData) {
   });
 }
 
-  createStickyTimer(60 * 60); 
-
-// Darkmode bleibt wie gehabt
+// Darkmode
 const darkBtn = document.getElementById("darkToggle");
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
@@ -170,3 +164,4 @@ darkBtn.addEventListener("click", () => {
 
 // Quiz starten
 renderQuiz(quizData);
+createStickyTimer(60 * 60);
