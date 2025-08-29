@@ -53,6 +53,7 @@ function createStickyTimer(durationInSeconds) {
       timerDiv.textContent = "00:00:00";
       alert("Die Zeit ist abgelaufen!");
       document.querySelectorAll('.answers button').forEach(b => b.disabled = true);
+      saveScore(score); // auch speichern wenn Zeit um ist
     }
 
     timer--;
@@ -130,9 +131,7 @@ function renderQuiz(quizData) {
         }
 
         scoreDiv.textContent = `Punkte: ${score} / ${quizQuestions.length}`;
-
-
-        
+        checkIfFinished(); // prüfen ob Quiz beendet ist
       });
 
       answersDiv.appendChild(button);
@@ -142,6 +141,72 @@ function renderQuiz(quizData) {
     quizContainer.appendChild(questionDiv);
   });
 }
+
+// Prüfen ob Quiz fertig ist → Score speichern
+function checkIfFinished() {
+  const finished = document.querySelectorAll(".answers.finished").length;
+  if (finished === maxQuestions) {
+    saveScore(score);
+  }
+}
+
+// Score in LocalStorage speichern
+function saveScore(points) {
+  let scores = JSON.parse(localStorage.getItem("scores")) || [];
+  const date = new Date().toLocaleString(); // Zeitpunkt merken
+  scores.push({ points, date });
+  localStorage.setItem("scores", JSON.stringify(scores));
+}
+
+function showScoreList() {
+  let scores = JSON.parse(localStorage.getItem("scores")) || [];
+  let listDiv = document.getElementById("scoreList");
+
+  if (!listDiv) {
+    listDiv = document.createElement("div");
+    listDiv.id = "scoreList";
+    listDiv.style.position = "fixed";
+    listDiv.style.right = "20px";
+    listDiv.style.top = "70px";
+    listDiv.style.width = "250px";
+    listDiv.style.padding = "15px";
+    listDiv.style.borderRadius = "10px";
+    listDiv.style.background = "rgba(0,0,0,0.85)";
+    listDiv.style.color = "#fff";
+    listDiv.style.fontFamily = "Arial, sans-serif";
+    listDiv.style.fontSize = "14px";
+    listDiv.style.maxHeight = "300px";
+    listDiv.style.overflowY = "auto";
+    listDiv.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
+    listDiv.style.zIndex = "2000";
+
+    // Close Button
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = "✖";
+    closeBtn.style.float = "right";
+    closeBtn.style.background = "transparent";
+    closeBtn.style.border = "none";
+    closeBtn.style.color = "#fff";
+    closeBtn.style.fontSize = "16px";
+    closeBtn.style.cursor = "pointer";
+    closeBtn.addEventListener("click", () => listDiv.remove());
+    listDiv.appendChild(closeBtn);
+
+    document.body.appendChild(listDiv);
+  }
+
+  listDiv.innerHTML += "<h3 style='margin-top:0; color:#ffd700'>Gespeicherte Punktestände</h3><ul style='padding-left:20px; margin:0; list-style-type:disc;'>" +
+    scores.map(s => `<li>${s.date} → ${s.points} Punkte</li>`).join("") +
+    "</ul>";
+
+
+
+
+
+}
+
+
+
 
 // Darkmode
 const darkBtn = document.getElementById("darkToggle");
@@ -160,6 +225,37 @@ darkBtn.addEventListener("click", () => {
   }
 });
 
+
+
 // Quiz starten
 renderQuiz(quizData);
 createStickyTimer(60 * 60);
+
+
+const showScoresBtn = document.getElementById("showScoresBtn");
+showScoresBtn.style.position = "fixed";
+showScoresBtn.style.bottom = "20px";      // unten links
+showScoresBtn.style.left = "20px";
+showScoresBtn.style.padding = "12px 20px";
+showScoresBtn.style.borderRadius = "25px";
+showScoresBtn.style.border = "none";
+showScoresBtn.style.background = "#28a745"; // schön grüner Farbton
+showScoresBtn.style.color = "#fff";
+showScoresBtn.style.fontSize = "16px";
+showScoresBtn.style.fontWeight = "bold";
+showScoresBtn.style.cursor = "pointer";
+showScoresBtn.style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)";
+showScoresBtn.style.transition = "all 0.2s ease";
+
+// Hover Effekt
+showScoresBtn.addEventListener("mouseenter", () => {
+  showScoresBtn.style.background = "#218838";
+  showScoresBtn.style.transform = "translateY(-2px)";
+});
+showScoresBtn.addEventListener("mouseleave", () => {
+  showScoresBtn.style.background = "#28a745";
+  showScoresBtn.style.transform = "translateY(0)";
+});
+
+// Klick → Score-Liste anzeigen
+showScoresBtn.addEventListener("click", showScoreList);
