@@ -160,7 +160,7 @@ const quizData = [
 
 // Frage 13: Teststufen
 {
-  question: "Welche Arten von Fehlerzuständen (1-4) werden in welchen Teststufen (A-D) AM EHESTEN gefunden?\n1. Fehlerzustände, wenn das Systemverhalten von den geschäftlichen Anforderungen abweicht\n2. Fehlerzustände in der Kommunikation zwischen Komponenten\n3. Fehlerzustände in einer isolierten Komponente\n4. Fehlerzustände in einer nicht korrekt implementierten User-Story\nA. Komponententest\nB. Komponentenintegrationstest\nC. Systemtest\nD. Abnahmetests",
+  question: "",
   description: "Wählen Sie EINE Option! (1 aus 4) – FL-2.2.1 (K2) Der Lernende kann die verschiedenen Teststufen unterscheiden.",
   options: [
     "a) 1D, 2B, 3A, 4C",
@@ -168,8 +168,9 @@ const quizData = [
     "c) 1B, 2A, 3D, 4C",
     "d) 1C, 2A, 3B, 4D"
   ],
-  correct: 0
-  // image: "bilder/teststufen.png" // optional
+  correct: 0,
+  image:"img/seta13.png"
+
 },
 
 // Frage 14: Wartungstest
@@ -953,26 +954,6 @@ question: "",
     ],
     correct: 0
   },
-  {
-    question: "Welches Kriterium eignet sich AM BESTEN als Eingangskriterium für Schritt (2) der CI/CD-Pipeline (Integration in Branch „Test“)?",
-    options: [
-      "a) Die statische Analyse meldet für den übermittelten Code keine Fehler und keine Warnungen mit hohem Schweregrad.",
-      "b) Die Versionskontrolle meldet keine Konflikte beim Kompilieren und Integrieren des Codes in den „Test“-Zweig.",
-      "c) Die Komponententests sind kompiliert und stehen lauffähig für den „Test“-Zweig zur Verfügung.",
-      "d) Die Anweisungsüberdeckung des Komponententests beträgt mindestens 80 %."
-    ],
-    correct: 0
-  },
-  {
-  question: "Welches Kriterium eignet sich AM BESTEN als Eingangskriterium für Schritt (2) der CI/CD-Pipeline (Integration in Branch „Test“)?",
-  options: [
-    "a) Die statische Analyse meldet für den übermittelten Code keine Fehler und keine Warnungen mit hohem Schweregrad.",
-    "b) Die Versionskontrolle meldet keine Konflikte beim Kompilieren und Integrieren des Codes in den „Test“-Zweig.",
-    "c) Die Komponententests sind kompiliert und stehen lauffähig für den „Test“-Zweig zur Verfügung.",
-    "d) Die Anweisungsüberdeckung des Komponententests beträgt mindestens 80 %."
-  ],
-  correct: 0
-},
  {
     question: "Welche der folgenden Aussagen beschreibt ein Beispiel dafür, wie Konfigurationsmanagement (KM) das Testen unterstützt?",
     options: [

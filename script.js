@@ -157,7 +157,6 @@ function saveScore(points) {
   scores.push({ points, date });
   localStorage.setItem("scores", JSON.stringify(scores));
 }
-
 function showScoreList() {
   let scores = JSON.parse(localStorage.getItem("scores")) || [];
   let listDiv = document.getElementById("scoreList");
@@ -192,17 +191,29 @@ function showScoreList() {
     closeBtn.addEventListener("click", () => listDiv.remove());
     listDiv.appendChild(closeBtn);
 
+    // Überschrift
+    const heading = document.createElement("h3");
+    heading.textContent = "Gespeicherte Punktestände";
+    heading.style.marginTop = "0";
+    heading.style.color = "#ffd700";
+    listDiv.appendChild(heading);
+
+    // Liste erzeugen
+    const ul = document.createElement("ul");
+    ul.style.paddingLeft = "20px";
+    ul.style.margin = "0";
+    ul.style.listStyleType = "disc";
+
+    scores.forEach(s => {
+      const li = document.createElement("li");
+      li.textContent = `${s.date} → ${s.points} Punkte`;
+      ul.appendChild(li);
+    });
+
+    listDiv.appendChild(ul);
+
     document.body.appendChild(listDiv);
   }
-
-  listDiv.innerHTML += "<h3 style='margin-top:0; color:#ffd700'>Gespeicherte Punktestände</h3><ul style='padding-left:20px; margin:0; list-style-type:disc;'>" +
-    scores.map(s => `<li>${s.date} → ${s.points} Punkte</li>`).join("") +
-    "</ul>";
-
-
-
-
-
 }
 
 
