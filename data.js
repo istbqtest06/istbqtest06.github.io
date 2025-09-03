@@ -222,7 +222,9 @@ const quizData = [
     "c) Technisches Review",
     "d) Inspektion"
   ],
-  correct: 1
+  correct: 1,
+    image:"img/seta17.png"
+
 },
 
 // Frage 18: Erfolgsfaktor für Review
@@ -1338,7 +1340,9 @@ question: "",
     "c) Ein spezieller Benutzer versucht, auf Etage 5 zuzugreifen.",
     "d) Ein spezieller Benutzer erhält Zugang zu den Etagen 1, 2 und 3."
   ],
-  correct: 3
+  correct: 3,
+      image:"img/setc24.png"
+
 
 },
 {
