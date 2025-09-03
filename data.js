@@ -976,16 +976,7 @@ question: "",
             image:"img/SETB38.png"
 
   },
-  {
-    question: "Welche der folgenden Optionen ordnet die Beschreibungen und Kategorien von Testwerkzeugen AM BESTEN einander zu?",
-    options: [
-      "a) 1A, 2B, 3C, 4D",
-      "b) 1B, 2D, 3C, 4A",
-      "c) 1C, 2D, 3B, 4A",
-      "d) 1D, 2C, 3A, 4B"
-    ],
-    correct: 2
-  },
+
   {
   question: "",
     options: [
@@ -994,7 +985,7 @@ question: "",
       "c)1C, 2D, 3B, 4A",
       "d)1D, 2C, 3A, 4B"
     ],
-    correct: 0,
+    correct: 2,
      image:"img/setB39.png"
 
   },
