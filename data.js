@@ -1817,9 +1817,19 @@ question: "",
       "c) 16 Stunden",
       "d) 12 Stunden"
     ],
-    correct: 2,
+    correct: 0,
     
   image:"img/setD31.png"
+  },
+      {
+  question: "Welcher der folgenden Zwecke gehört NICHT zu den gültigen Zielen eines Testberichts?",
+    options: [
+      "a) Verfolgung des Testfortschritts und Identifizierung von Bereichen, die weitere Aufmerksamkeit erfordern.",
+      "b) Bereitstellung von Informationen über die durchgeführten Tests, deren Ergebnisse und gefundene Probleme oder Fehlerzustände",
+      "c) Bereitstellung detaillierter Informationen zu jedem einzelnen Fehlerzustand, einschließlich der Schritte zur Reproduktion ",
+      "d) Bereitstellung von Informationen über die für den nächsten Zeitraum geplanten Tests"
+    ],
+    correct: 2,
   },
   {
   question: "",
@@ -1830,7 +1840,7 @@ question: "",
       "d) Konfigurationsmanagement"
     ],
     correct: 3,
-      image:"img/setD32.png"
+      image:"img/setd37"
 
   },
   {
