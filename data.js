@@ -1840,7 +1840,7 @@ question: "",
       "d) Konfigurationsmanagement"
     ],
     correct: 3,
-      image:"img/setd37"
+      image:"img/setd37.png"
 
   },
   {
