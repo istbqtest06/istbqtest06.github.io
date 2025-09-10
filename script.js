@@ -270,12 +270,3 @@ showScoresBtn.addEventListener("mouseleave", () => {
 
 // Klick → Score-Liste anzeigen
 showScoresBtn.addEventListener("click", showScoreList);
-
-
-
-
-
-
-
-
-

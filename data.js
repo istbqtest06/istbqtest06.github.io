@@ -1250,14 +1250,15 @@ question: "",
 },
 
 {
-  question: "Geschäftsregel: Wert (Ganzzahl), wenn Wert ≤ 100 oder Wert ≥ 200, dann 'Wert falsch', sonst 'Wert OK'. Testfälle per 2-Werte-Grenzwertanalyse.",
+  question: "",
   options: [
     "a) 100, 150, 200, 201",
     "b) 99, 100, 200, 201",
     "c) 98, 99, 100, 101",
     "d) 101, 150, 199, 200"
   ],
-  correct: 3
+  correct: 3,
+  image:"img/setc21.png"
 },
 {
   question: "",
@@ -1341,7 +1342,7 @@ question: "",
     "d) Ein spezieller Benutzer erhält Zugang zu den Etagen 1, 2 und 3."
   ],
   correct: 3,
-      image:"img/setc24.png"
+      image:"img/setc29.png"
 
 
 },
