@@ -605,7 +605,7 @@ const quizData = [
       "c) Die Anzahl der Jahre an Testerfahrung der Mitglieder des Testteams.",
       "d) Die Organisationsstruktur der Benutzer der zu entwickelnden Anwendung."
     ],
-    correct: 3
+    correct: 2
   },
   
   // Frage 6: Verfolgbarkeit und Testaktivitäten
