@@ -2529,14 +2529,15 @@ question: "",
     correct: 1
   },
   {
-    question: "Eine Fitness-App misst die Anzahl der täglich zurückgelegten Schritte und gibt dazu Feedback. Welche der folgenden Gruppen von Testeingabewerten würde für die höchste Überdeckung von Äquivalenzklassen sorgen?",
+  question: "",
     options: [
       "a) 0, 1000, 2000, 3000, 4000",
       "b) 1000, 2001, 4000, 4001, 6000",
       "c) 123, 2345, 3456, 4567, 5678",
       "d) 666, 999, 2222, 5555, 6666"
     ],
-    correct: 3
+    correct: 3,
+      image:"img/setf20.png"
   },
     {
   question: "",
