@@ -1210,19 +1210,7 @@ question: "",
     "d) 1, 111, 1111, 11111"
   ],
   correct: 0
-},{
-  question: "Welcher der folgenden Punkte ist ein typischer Vorteil von frühem undhäufigem Stakeholder-Feedback? ",
-  options: [
-    "a) Änderungen an Anforderungen werden frühzeitig erkannt und können schneller umgesetzt werden.",
-    "b) Geschäftsinteressenten erhalten eine Schulung zu den Benutzeranforderungen.",
-    "c) Product Owner können ihre Anforderungen beliebig oft ändern.",
-    "d) Endnutzer werden vor der Freigabe über nicht umgesetzte Anforderungen informiert."
-  ],
-  correct: 0
-
-
 },
-
 //17
 {
   question: "",
@@ -1486,14 +1474,17 @@ question: "",
   correct: 3
 },
 {
-  question: "Ein Designer erstellt das Layout einer Benutzeroberfläche, berücksichtigt dabei jedoch nicht die Bedürfnisse behinderter Nutzer. Ein Entwickler implementiert das Design, verzichtet aber auf eine geeignete Ausnahmebehandlung für Bonusberechnungen. Welche Aussage ist korrekt?",
+  question: "",
   options: [
     "a) Die fehlerhafte Bonusberechnung ist ein sporadisch auftretender Fehlerzustand.",
     "b) Die verhängte Geldstrafe wegen mangelnder Barrierefreiheit stellt einen Ausfall dar.",
     "c) Der Zeitdruck, unter dem der Entwickler stand, ist eine wesentliche Ursache.",
     "d) Das Design enthält eine offensichtliche Fehlerwirkung des Designers."
   ],
-  correct: 2
+  correct: 2,
+      image:"img/setd2.png"
+
+
 },
 {
   question: "Tester leiten aus denselben Testbedingungen jeweils unterschiedliche Testfälle ab. Welcher Grundsatz des Testens wird dadurch am besten verdeutlicht?",
@@ -2756,3 +2747,14 @@ question: "",
     correct: 0
   }
 ];
+
+// Montag 15.09 
+// 27 -1 
+// 18 - 1 
+//11-1
+//MIttwoch
+//25-1
+//18-1
+// 22-1
+//15-1
+//17-1
